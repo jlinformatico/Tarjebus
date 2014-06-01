@@ -20,10 +20,17 @@ function initialize() {
   
   var marker, i;
   var markers = new Array();
+  var icon = new google.maps.MarkerImage(
+    "http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png",
+    new google.maps.Size(20, 34),
+    new google.maps.Point(0, 0),
+    new google.maps.Point(10, 34)
+    );
   for (i = 0; i < locations.length; i++) {
     marker = new google.maps.Marker({
       position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-      map: map
+      map: map,
+      'icon': icon
     });
     markers.push(marker);
     google.maps.event.addListener(marker, 'click', (function(marker, i) {
