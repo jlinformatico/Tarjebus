@@ -8,6 +8,7 @@ function initialize() {
     ];
 
   var mapOptions = {
+    center: new google.maps.LatLng(-27.4704241, -58.9754468),
     zoom: 13,
     disableDefaultUI: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -21,8 +22,8 @@ function initialize() {
   var marker, i;
   var markers = new Array();
   var icon = new google.maps.MarkerImage(
-    "http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png",
-    new google.maps.Size(20, 34),
+    "findajob.png",
+    new google.maps.Size(32, 37),
     new google.maps.Point(0, 0),
     new google.maps.Point(10, 34)
     );
