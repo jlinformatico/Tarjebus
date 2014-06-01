@@ -8,7 +8,7 @@ function initialize() {
     ];
 
   var mapOptions = {
-    zoom: 10,
+    zoom: 13,
     disableDefaultUI: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
