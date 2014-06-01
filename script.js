@@ -3,14 +3,14 @@ var map;
 function initialize() {
 
   var locations = [
-      ['Caja Municipal De Resistencia', -27.4540748, -58.981437, 2],
-      ['Tarjebus S.A', -27.4517084, -58.987703, 1]
+      ['Caja Municipal De Resistencia', 'Julio A. Roca 35, Resistencia, Chaco', -27.4540748, -58.981437, 2],
+      ['Tarjebus S.A', 'Av Italia 102, Resistencia, Chaco', -27.4517084, -58.987703, 1]
     ];
 
   var mapOptions = {
     center: new google.maps.LatLng(-27.4704241, -58.9754468),
     zoom: 13,
-    disableDefaultUI: true,
+    //disableDefaultUI: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
@@ -25,18 +25,19 @@ function initialize() {
     "findajob.png",
     new google.maps.Size(32, 37),
     new google.maps.Point(0, 0),
-    new google.maps.Point(10, 34)
+    new google.maps.Point(15, 35)
     );
   for (i = 0; i < locations.length; i++) {
     marker = new google.maps.Marker({
-      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      position: new google.maps.LatLng(locations[i][2], locations[i][3]),
       map: map,
       'icon': icon
     });
     markers.push(marker);
     google.maps.event.addListener(marker, 'click', (function(marker, i) {
       return function() {
-        infowindow.setContent(locations[i][0]);
+        content = "<h3>" + locations[i][0] + "</h3><h4>" + locations[i][1] + "</h4>";
+        infowindow.setContent(content);
         infowindow.open(map, marker);
       }
     })(marker, i));
@@ -45,22 +46,35 @@ function initialize() {
   // Try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = new google.maps.LatLng(position.coords.latitude,
-                                       position.coords.longitude);
+      var pos = new google.maps.LatLng(
+        position.coords.latitude,
+        position.coords.longitude);
 
-      var infowindow = new google.maps.InfoWindow({
+      var icon = new google.maps.MarkerImage(
+        "street_view.png",
+        new google.maps.Size(11, 24),
+        new google.maps.Point(0, 0),
+        new google.maps.Point(8, 20)
+        );
+      var marker = new google.maps.Marker({
+        position: pos,
+        map: map,
+        'icon': icon
+      });
+
+      /*var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
         content: 'Ubicación encontrado usando HTML5.'
-      });
+      });*/
 
       map.setCenter(pos);
     }, function() {
-      handleNoGeolocation(true);
+      //handleNoGeolocation(true);
     });
   } else {
     // Browser no soporta Geolocalización
-    handleNoGeolocation(false);
+    //handleNoGeolocation(false);
   }
 }
 
