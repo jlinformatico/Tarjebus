@@ -1,11 +1,15 @@
 var map;
 
 function initialize() {
+  
   var mapOptions = {
-    zoom: 15
+    zoom: 15,
+    disableDefaultUI: true,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
   };
+
   map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
+    mapOptions);
 
   // Try HTML5 geolocation
   if(navigator.geolocation) {
