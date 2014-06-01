@@ -1,7 +1,12 @@
 var map;
 
 function initialize() {
-  
+
+  var locations = [
+      ['Caja Municipal De Resistencia', -27.4540748, -58.981437, 2],
+      ['Tarjebus S.A', -27.4517084, -58.987703, 1]
+    ];
+
   var mapOptions = {
     zoom: 15,
     disableDefaultUI: true,
@@ -11,6 +16,24 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
 
+  var infowindow = new google.maps.InfoWindow();
+  
+  var marker, i;
+  var markers = new Array();
+  for (i = 0; i < locations.length; i++) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      map: map
+    });
+    markers.push(marker);
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      return function() {
+        infowindow.setContent(locations[i][0]);
+        infowindow.open(map, marker);
+      }
+    })(marker, i));
+  }
+   
   // Try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
