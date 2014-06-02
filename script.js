@@ -51,7 +51,7 @@ function initialize() {
   var marker, i;
   var markers = new Array();
   var icon = new google.maps.MarkerImage(
-    "findajob.png",
+    "img/findajob.png",
     new google.maps.Size(32, 37),
     new google.maps.Point(0, 0),
     new google.maps.Point(15, 35)
@@ -80,7 +80,7 @@ function initialize() {
         position.coords.longitude);
 
       var icon = new google.maps.MarkerImage(
-        "street_view.png",
+        "img/street_view.png",
         new google.maps.Size(11, 24),
         new google.maps.Point(0, 0),
         new google.maps.Point(8, 20)
