@@ -35,7 +35,7 @@ function initialize() {
     ['Telecentro', 'Av Laprida 5310', -27.4868953, -58.9318122, 28],
     ['Antonio J. Bojanich', 'Av 9 de Julio 4499', -27.4870036, -58.9461618, 29],
     // #Corrientes
-    ['Sergio Banquero', 'Salta 918', -27.4675445, -58.8392878, 30]         
+    ['Sergio Banquero', 'Salta 918', -27.4675445, -58.8392878, 30]       
   ];
 
   var myLatlng = new google.maps.LatLng(-27.4581247, -59.0253573);
@@ -93,7 +93,7 @@ function initialize() {
         map: map,
         'icon': icon
       });
-      map.setCenter(pos); // Centramos el mapaen la ubicación del geoposition
+      map.setCenter(pos); // Centramos el mapa en la ubicación del geoposition
       map.setZoom(13); // Aumentamos el zoom
     });
   }
