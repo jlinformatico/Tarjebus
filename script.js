@@ -2,7 +2,7 @@ var map;
 
 function initialize() {
   var locations = [
-    // Resistencia
+    // #Resistencia
     ['Polirubro Aye y Tati', 'Av Chaco 485', -27.4675118, -58.9763704, 1],
     ['Maxikiosco Juan Lucas', 'Av Mac Lean 817', -27.4448822, -59.0082411, 2],
     ['Mercadito Riki', 'Av Lavalle 1396', -27.4336536, -58.9918965, 3],
@@ -24,7 +24,16 @@ function initialize() {
     ['Librería Seño Norma', 'Av Hernandarias 2045', -27.4609324, -59.0116237, 19],
     //['Viviana E. Toros', 'Mz 2 Pc 1 Calle A. del Carril. B° Guiraldes', 0, 0, 20],
     ['Miriam E. Romero', 'Av Sabín 655', -27.4253902, -58.9777985, 21],
-    ['Maxi Martín', 'Av Alberdi 1402', -27.4624885, -58.9989774, 22]
+    ['Maxi Martín', 'Av Alberdi 1402', -27.4624885, -58.9989774, 22],
+    // #Fontana
+    ['Maxikiosco 24hs', 'Av Alvear 4885', -27.4312348, -59.0233787, 23],
+    ['Maxikiosco 24hs', 'Av Alvear 3978', -27.4312581, -59.0234047, 24],
+    // #Barranqueras
+    //['Drugstore Greychu', 'Mz 76 Pc 10 B° 200 Viviendas', 0, 0, 25],
+    //['Municipio Barranqueras', 'Caja Municipal', 0, 0, 26],
+    ['Kiosco 24hs', 'Diagonal Eva Perón 17', -27.4829197, -58.9436913, 27],
+    ['Telecentro', 'Av Laprida 5310', -27.4868953, -58.9318122, 28],
+    ['Antonio J. Bojanich', 'Av 9 de Julio 4499', -27.4870036, -58.9461618, 29]         
   ];
 
   var mapOptions = {
