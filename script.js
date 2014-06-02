@@ -92,18 +92,18 @@ function initialize() {
         'icon': icon
       });
 
-      var infowindow = new google.maps.InfoWindow({
+      /*var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
         content: 'Usted está aquí!'
-      });
+      });*/
 
       //map.setCenter(pos);
     }, function() {
       //handleNoGeolocation(true);
     });
   }
-  //map.panBy(-50, 0);
+  map.panBy(50, 0);
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
