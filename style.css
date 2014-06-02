@@ -26,12 +26,11 @@ footer { margin-top: -20px; position: relative; background-color: #eeeeee; paddi
 footer p { line-height: 0; margin: 0; font-size: 11px; }
 footer p span { color: #e74c3c; }
 
-.vasquette-margin-enabled#rap-card, .vasquette-margin-enabled#omnibox { margin: 15px 15px 15px 30px; }
 #omnibox {
 	background-color: #fff;
 	position: absolute;
 	left: 0px;
-	margin: 16px;
+	margin: 15px;
 	top: 0px;
 	z-index: 10;
 	padding: 5px 10px 10px 10px;
