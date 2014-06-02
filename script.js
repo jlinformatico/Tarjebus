@@ -93,6 +93,8 @@ function initialize() {
         map: map,
         'icon': icon
       });
+      map.setCenter(pos); // Centramos el mapaen la ubicación del geoposition
+      map.setZoom(13); // Aumentamos el zoom
     });
   }
   map.panBy(100, 0);
