@@ -41,7 +41,7 @@ function initialize() {
   var myLatlng = new google.maps.LatLng(-27.4581247, -59.0253573);
   var mapOptions = {
     center: myLatlng,
-    zoom: 12,
+    zoom: 13,
     disableDefaultUI: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
@@ -94,10 +94,10 @@ function initialize() {
         'icon': icon
       });
       map.setCenter(pos); // Centramos el mapa en la ubicación del geoposition
-      map.setZoom(13); // Aumentamos el zoom
+      map.setZoom(14); // Aumentamos el zoom
     });
   }
-  map.panBy(100, 0);
+  map.panBy(500, -50);
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
