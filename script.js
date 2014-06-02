@@ -33,13 +33,15 @@ function initialize() {
     //['Municipio Barranqueras', 'Caja Municipal', 0, 0, 26],
     ['Kiosco 24hs', 'Diagonal Eva Perón 17', -27.4829197, -58.9436913, 27],
     ['Telecentro', 'Av Laprida 5310', -27.4868953, -58.9318122, 28],
-    ['Antonio J. Bojanich', 'Av 9 de Julio 4499', -27.4870036, -58.9461618, 29]         
+    ['Antonio J. Bojanich', 'Av 9 de Julio 4499', -27.4870036, -58.9461618, 29],
+    // #Corrientes
+    ['Sergio Banquero', 'Salta 918', -27.4675445, -58.8392878, 30]         
   ];
 
   var myLatlng = new google.maps.LatLng(-27.4581247, -59.0253573);
   var mapOptions = {
     center: myLatlng,
-    zoom: 13,
+    zoom: 12,
     disableDefaultUI: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
@@ -91,19 +93,9 @@ function initialize() {
         map: map,
         'icon': icon
       });
-
-      /*var infowindow = new google.maps.InfoWindow({
-        map: map,
-        position: pos,
-        content: 'Usted está aquí!'
-      });*/
-
-      //map.setCenter(pos);
-    }, function() {
-      //handleNoGeolocation(true);
     });
   }
-  map.panBy(50, 0);
+  map.panBy(100, 0);
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
