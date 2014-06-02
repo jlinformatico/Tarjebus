@@ -36,8 +36,9 @@ function initialize() {
     ['Antonio J. Bojanich', 'Av 9 de Julio 4499', -27.4870036, -58.9461618, 29]         
   ];
 
+  var myLatlng = new google.maps.LatLng(-27.4581247, -59.0253573);
   var mapOptions = {
-    center: new google.maps.LatLng(-27.4704241, -58.9754468),
+    center: myLatlng,
     zoom: 13,
     disableDefaultUI: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -97,31 +98,12 @@ function initialize() {
         content: 'Usted está aquí!'
       });
 
-      map.setCenter(pos);
+      //map.setCenter(pos);
     }, function() {
       //handleNoGeolocation(true);
     });
-  } else {
-    // Browser no soporta Geolocalización
-    //handleNoGeolocation(false);
   }
-}
-
-function handleNoGeolocation(errorFlag) {
-  if (errorFlag) {
-    var content = 'Error: El servicio de Geolocalización falló.';
-  } else {
-    var content = 'Error: Su navegador no soporta geolocalización.';
-  }
-
-  var options = {
-    map: map,
-    position: new google.maps.LatLng(60, 105),
-    content: content
-  };
-
-  var infowindow = new google.maps.InfoWindow(options);
-  map.setCenter(options.position);
+  //map.panBy(-50, 0);
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
