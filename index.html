@@ -3,15 +3,16 @@
   <head>
     <title>Tarjebus</title>
     <meta name="description" content="Mapa con los puntos de venta y recarga de la Tarjebus.">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <!--
-    Incluya los mapas javascript con sensor=true para determinar la ubicación del usuario.
-    Ver: https://developers.google.com/maps/documentation/javascript/tutorial#Loading_the_Maps_API
-    -->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
     <script src="script.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <div id="map-canvas"></div>
